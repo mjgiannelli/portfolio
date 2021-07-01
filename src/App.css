@@ -1,38 +1,324 @@
-.App {
+/* variable declarations */
+:root {
+  --primary-color: #000000;
+  --secondary-color: red;
+  --text-color: #fff;
+  --text-style: papyrus;
+}
+
+/* get webpage to use entire space */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+}
+
+/* create styling for the body */
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+}
+
+/* apply styles to header */
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  background-color: var(--primary-color);
+  font-size: 48px;
+  font-family: var(--text-style);
+}
+
+/*apply styles to the nav bar and links*/
+
+header nav {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+header a:hover {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  font-style: var(--text-style);
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  font-family: var(--text-style);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* style the "about me" section */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title {
+  font-size: 40px;
+  text-align: center;
+  font-family: var(--text-style);
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.bio {
+  display: flex;
   align-items: center;
+  height: 100%;
+  margin: 0 100px;
+}
+
+.selfie {
+  height: 400px;
+}
+
+.para1 {
+  align-self: flex-start;
+  text-align: right;
+  width: 50%;
+}
+
+.para2 {
+  align-self: flex-end;
+  width: 50%;
+}
+
+.para1::first-letter, .para2::first-letter {
+  font-size: 20px;
+  font-family: var(--text-style);
+  color: var(--secondary-color);
+}
+
+/* style the portfolio section */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.projects h4 {
+  text-align: center;
+  font-size: 20px;
+  font-family: var(--text-style);
+}
+
+.picture {
+  height: 92%;
+  width: 100%;
+  margin: 5px;
+}
+
+.picture:hover, .picture-2:hover {
+  border: 10px solid var(--text-color);
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+.secondary-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.picture-2 {
+  height: 200px;
+  width: 100%;
+  margin: 5px;
+}
+
+/* style the contact info section */
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info a {
+  text-decoration: none;
+  font-family: var(--text-style);
+  color: var(--text-color);
+  font-size: 35px;
+  
+}
+
+.contact-info a:hover {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* style the footer */
+footer {
+  width: 100%;
+  padding: 40px 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+footer h5 {
+  color: var(--text-color);
+  font-size: 30px;
+  margin: 0;
+  font-family: var(--text-style);
+}
+
+footer h5 span {
+  color: var(--secondary-color);
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+
+header nav ul li a {
+  font-size: 32px;
+}
+
+.bio {
+  height: 800px;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.secondary-projects {
+  flex: 1 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-info {
+  flex: 0 70%;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
+
+.contact-info a {
+  font-size: 25px; 
+}
+
+.para1 {
+  text-align: left;
+  width: 100%;
+}
+
+.para2 {
+  height: 100%;
+  width: 100%;
+}
+
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+
+header h1 {
+  font-size: 36px;
+}
+
+header nav ul li a {
+  font-size: 20px;
+}
+
+.bio {
+  height: 900px;
+  
+}
+
+.picture {
+  height: 300px;
+}
+
+.projects h4 {
+  font-size: 16px;
+}
+
+.picture-2 {
+  height: 160px;
+}
+
+.contact-info a {
+  font-size: 20px; 
+}
+
+.title {
+  font-size: 36px;
+}
+
+}
+
+/* MEDIA QUERY FOR MOBLE AND SMALLER */
+@media screen and (max-width: 575px) {
+
+header h1 {
+  font-size: 28px;
+}
+  
+header nav ul li a {
+  font-size: 16px;
+}
+
+.bio {
+  height: 1100px;
+  
+}
+
+.picture {
+  height: 250px;
+}
+
+.projects h4 {
+  font-size: 12px;
+}
+
+.picture-2 {
+  height: 120px;
+  width: 200px;
+}
+
+.contact-info a {
+  font-size: 16px; 
+}
+
+.title {
+  font-size: 20px;
+}
+
+footer h5 {
+  font-size: 20px;
+}
+
+}
+

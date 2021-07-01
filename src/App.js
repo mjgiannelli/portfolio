@@ -1,15 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './header';
+import AboutMe from './about-me';
+import Portfolio from './portfolio';
+import ContactInfo from './contact';
+import Footer from './footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Website Currently Under Construction
-        </p>
-      </header>
+      <Header />
+      <AboutMe />
+      <Portfolio />
+      <ContactInfo />
+      <Footer />
     </div>
   );
 }
