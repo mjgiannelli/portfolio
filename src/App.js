@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './header';
+import Navbar from './Navbar';
 import AboutMe from './about-me';
 import Portfolio from './portfolio';
 import ContactInfo from './contact';
@@ -8,11 +8,11 @@ import Footer from './footer';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <AboutMe />
-      <Portfolio />
+      <Navbar />
+      {/* <AboutMe /> */}
+      {/* <Portfolio />
       <ContactInfo />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

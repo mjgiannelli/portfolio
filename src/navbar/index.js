@@ -1,4 +1,4 @@
-function Header() {
+function Navbar() {
     // Use the render function to return JSX component       
     return (
       <header>
@@ -22,4 +22,4 @@ function Header() {
     )
   }
 
-  export default Header;
+  export default Navbar;
